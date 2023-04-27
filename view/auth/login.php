@@ -6,6 +6,10 @@
   require_once '../../utils/setError.php';
   session_start();
 
+  if(isset($_SESSION['logged_user'])) {
+    var_dump($_SESSION['logged_user']);
+  }
+
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($_POST['email']) && !empty($_POST['password'])) handleLogin($_POST['email'], $_POST['password']);
     else setError("all field must be filled!");
@@ -37,6 +41,7 @@
                   ?>
               </div>
             <?php } ?>
+            
             <button class="mb-4 btn btn-primary btn-lg btn-block" type="submit">Login</button>
 
             <p class="" style="color: #393f81;">Don't have an account? <a href="/view/auth/register.php" style="color: #508bfc;">Sign up here</a></p>
