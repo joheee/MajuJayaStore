@@ -1,5 +1,4 @@
-<?php require_once '../../utils/includeTemplate.php'; ?>
-
+<?= require_once '../../utils/includeTemplate.php'; ?>
 
 <?= include_template('../../view/template/header.php', ['title' => 'Login | MajuJaya']) ?>
 
@@ -13,23 +12,14 @@
             <h3 class="mb-5">Sign in</h3>
 
             <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Email</label>
+              <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="email" name="email">
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typePasswordX-2">Password</label>
+              <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="password" name="password"/>
             </div>
 
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
-            <hr class="my-4">
-
-            <button class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-              type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-            <button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-              type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
 
           </div>
         </div>
@@ -38,4 +28,4 @@
   </div>
 </section>
 
-<?= include_template('../../view/template/header.php') ?>
+<?= include_template('../../view/template/footer.php') ?>
