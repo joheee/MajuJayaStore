@@ -11,11 +11,23 @@
             <h3 class="mb-5">Sign Up</h3>
 
             <div class="form-outline mb-4">
-              <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="email" name="email">
+              <input type="text" id="form2Example17" class="form-control form-control-lg" placeholder="new name" name="name">
             </div>
 
             <div class="form-outline mb-4">
-              <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="password" name="password"/>
+              <input type="text" id="form2Example17" class="form-control form-control-lg" placeholder="new address" name="address">
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example17" class="form-control form-control-lg" placeholder="new email" name="email">
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example27" class="form-control form-control-lg" placeholder="new password" name="password"/>
+            </div>
+
+            <div class="alert alert-danger" role="alert" >
+                error message
             </div>
 
             <button class="mb-4 btn btn-primary btn-lg btn-block" type="submit">Register</button>
