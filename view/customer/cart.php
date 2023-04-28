@@ -6,11 +6,22 @@
     require_once '../../middleware/guestMiddleware.php';
     require_once '../../middleware/customerMiddleware.php';
     require_once '../../controller/getCartByUserId.php';
+    require_once '../../controller/handleCheckout.php';
+    require_once '../../utils/setError.php';
+
     session_start();
     guestMiddleware();
     customerMiddleware();
+
     $carts = getCartByUserId();
     $totalPrice = getTotalPrice()[0][0];
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if(!empty($_POST['payment'])) handleCheckout($_POST['payment']);
+        else setError("input your payment method!");
+        $carts = getCartByUserId();
+        $totalPrice = getTotalPrice()[0][0];
+    }
 ?>
 
 <div id="wrapper">
@@ -26,7 +37,7 @@
     
             <div class="container-fluid">
 
-                <div class="container card p-5">
+                <form action="" method="post" class="container card p-5">
                     <table class="table">
                         <thead>
                             <tr>
@@ -49,12 +60,25 @@
                         </tbody>
                     </table>
 
-                    <div class="">Total price : <?php echo $totalPrice ?></div>
+                    <div class="mb-4">Total price : <?php echo $totalPrice ?></div>
                     
-                </div>
+                    <?php if(isset($_SESSION['error'])) { ?>
+                        <div class="alert alert-danger" role="alert" style="width: 20rem;">
+                            <?php 
+                                echo $_SESSION['error']; 
+                                unset($_SESSION['error']);
+                            ?>
+                        </div>
+                    <?php } ?>
 
+                    <div class="form-outline mb-3" style="width: 20rem;">
+                        <input type="text" id="form2Example27" class="form-control form-control-lg" placeholder="input payment method" name="payment"/>
+                    </div>
+
+                    <button type="submit" style="width: 20rem;" class="btn btn-info btn-lg btn-block" type="submit">Checkout</button>
+
+                </form>
             </div>
-    
         </div>
     
         <footer class="sticky-footer bg-white">
