@@ -4,33 +4,34 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i class="fa-solid fa-screwdriver-wrench"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin Page</div>
     </a>
 
-    <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
-    <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <i class="fa-solid fa-people-group"></i>
+        <span>Customer</span></a>
     </li>
 
-    <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <i class="fa-sharp fa-solid fa-list"></i>
+        <span>Admin</span></a>
     </li>
     
-    <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <span>Transaction</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span></a>
     </li>
 </ul>
-<!-- End of Sidebar -->
