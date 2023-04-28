@@ -4,9 +4,11 @@
 
 <?php 
     require_once '../../middleware/guestMiddleware.php';
+    require_once '../../middleware/adminMiddleware.php';
     require_once '../../controller/getAllCustomer.php';
     session_start();
     guestMiddleware();
+    adminMiddleware();
     $customers = getAllCustomer();
 ?>
 

@@ -6,10 +6,12 @@
     require_once '../../controller/getProductById.php';
     require_once '../../utils/setError.php';
     require_once '../../middleware/guestMiddleware.php';
+    require_once '../../middleware/adminMiddleware.php';
   
     session_start();
     guestMiddleware();
-
+    adminMiddleware();
+    
     $id = $_GET['id'];
     $res = getProductById($id);
     $cloth = $res->fetch_assoc();

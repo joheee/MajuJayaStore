@@ -5,10 +5,12 @@
   require_once '../../controller/handleInsertCloth.php';
   require_once '../../utils/setError.php';
   require_once '../../middleware/guestMiddleware.php';
+  require_once '../../middleware/adminMiddleware.php';
   
   session_start();
   guestMiddleware();
-
+  adminMiddleware();
+  
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($_POST['product_name']) && !empty($_POST['product_stock']) && !empty($_POST['product_price'])) handleInsertCloth($_POST['product_name'], $_POST['product_stock'], $_POST['product_price']);
     else setError("all field must be filled!");
