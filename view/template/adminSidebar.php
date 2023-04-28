@@ -42,7 +42,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="../auth/handleLogout.php">
         <i class="fa-solid fa-right-from-bracket"></i>
         <span>Logout</span></a>
     </li>
