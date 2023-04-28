@@ -21,6 +21,9 @@
             $insertTransactionQuery = "INSERT INTO `transaction` (`transaction_id`, `user_id`, `product_id`, `ammount`, `transaction_date`, `payment_method`) VALUES (NULL, '$user_id', '$product_id', '$ammount', current_timestamp(), '$payment');";
             $con->query($insertTransactionQuery);
             
+            $updateProductQuery = "UPDATE `product` SET `product_stock` = product_stock - $ammount WHERE `product`.`product_id` = $product_id;";
+            $con->query($updateProductQuery);
+
             $cart_id = $cart['cart_id'];
             $removeCartQuery = "DELETE FROM cart WHERE cart_id='$cart_id'";
             $con->query($removeCartQuery);

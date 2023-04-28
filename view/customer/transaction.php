@@ -14,7 +14,6 @@
 
     $carts = getTransactionByUserId();
     $totalPrice = getTotalPrice()[0][0];
-    
 ?>
 
 <div id="wrapper">
@@ -37,6 +36,7 @@
                             <th scope="col">Product Name</th>
                             <th scope="col">Product Price</th>
                             <th scope="col">Ammount</th>
+                            <th scope="col">Payment Method</th>
                             <th scope="col">Transaction Date</th>
                             <th scope="col">Total Price per Product</th>
                             </tr>
@@ -47,6 +47,7 @@
                                     <td><?php echo $cart['product_name'] ?></td>
                                     <td><?php echo $cart['product_price'] ?></td>
                                     <td><?php echo $cart['ammount'] ?></td>
+                                    <td><?php echo $cart['payment_method'] ?></td>
                                     <td><?php echo $cart['transaction_date'] ?></td>
                                     <td><?php echo $cart['total_price'] ?></td>
                                 </tr>

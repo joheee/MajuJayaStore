@@ -9,7 +9,7 @@
     session_start();
     guestMiddleware();
     customerMiddleware();
-    $clothes = getAllProduct();
+    $clothes = getAllProductForCustomer();
 ?>
 
 <div id="wrapper">
