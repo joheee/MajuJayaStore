@@ -36,7 +36,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="/view/auth/changePassword.php">
         <i class="fa-solid fa-lock"></i>
         <span>Change Password</span></a>
     </li>
