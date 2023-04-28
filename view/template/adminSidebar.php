@@ -30,7 +30,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="admin.php">
         <i class="fa-sharp fa-solid fa-list"></i>
         <span>Admin</span></a>
     </li>
