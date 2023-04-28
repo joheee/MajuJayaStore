@@ -10,7 +10,6 @@
             $row = $res->fetch_all();
             
             $role = $row[0][4];
-            var_dump($role);
             if($role == 'admin') {
                 header("Location: ../admin/clothes.php");
                 exit;
