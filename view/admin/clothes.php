@@ -3,7 +3,10 @@
 
 
 <?php 
+    require_once '../../middleware/guestMiddleware.php';
     require_once '../../controller/getAllProduct.php';
+    session_start();
+    guestMiddleware();
     $clothes = getAllProduct();
 ?>
 
