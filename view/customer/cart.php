@@ -1,15 +1,16 @@
 <?php require_once '../../utils/includeTemplate.php'; ?>
-<?= include_template('../../view/template/header.php', ['title' => 'Home | MajuJaya']) ?>
+<?= include_template('../../view/template/header.php', ['title' => 'Your Cart | MajuJaya']) ?>
 
 
 <?php 
     require_once '../../middleware/guestMiddleware.php';
     require_once '../../middleware/customerMiddleware.php';
-    require_once '../../controller/getAllProduct.php';
+    require_once '../../controller/getCartByUserId.php';
     session_start();
     guestMiddleware();
     customerMiddleware();
-    $clothes = getAllProduct();
+    $carts = getCartByUserId();
+    $totalPrice = getTotalPrice()[0][0];
 ?>
 
 <div id="wrapper">
@@ -21,7 +22,7 @@
         <!-- Main Content -->
         <div id="content">
     
-            <?= include_template('../../view/template/customerNavigation.php', ['title' => 'Buy Clothes', 'email' => $_SESSION['logged_user']['email']]) ?>
+            <?= include_template('../../view/template/customerNavigation.php', ['title' => 'Your Cart', 'email' => $_SESSION['logged_user']['email']]) ?>
     
             <div class="container-fluid">
 
@@ -30,25 +31,26 @@
                         <thead>
                             <tr>
                             <th scope="col">Product Name</th>
-                            <th scope="col">Product Stock</th>
                             <th scope="col">Product Price</th>
-                            <th scope="col">Action</th>
+                            <th scope="col">Ammount</th>
+                            <th scope="col">Total Price per Product</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while($clothe = $clothes->fetch_assoc()) { ?>
+                            <?php while($cart = $carts->fetch_assoc()) { ?>
                                 <tr>
-                                <td><?php echo $clothe['product_name'] ?></td>
-                                <td><?php echo $clothe['product_stock'] ?></td>
-                                <td><?php echo $clothe['product_price'] ?></td>
-                                <td class="row gap-2">
-                                    <a class="col-auto btn btn-info" href="handleBuy.php?id=<?php echo $clothe['product_id'] ?>&stock=<?php echo $clothe['product_stock'] ?>">buy</a>
-                                </td>
+                                    <td><?php echo $cart['product_name'] ?></td>
+                                    <td><?php echo $cart['product_price'] ?></td>
+                                    <td><?php echo $cart['ammount'] ?></td>
+                                    <td><?php echo $cart['total_price'] ?></td>
                                 </tr>
                             <?php } ?>
                             
                         </tbody>
                     </table>
+
+                    <div class="">Total price : <?php echo $totalPrice ?></div>
+                    
                 </div>
 
             </div>
