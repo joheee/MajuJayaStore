@@ -56,7 +56,7 @@
                                 <td><?php echo $clothe['product_price'] ?></td>
                                 <td class="row gap-2">
                                     <a class="col-auto btn btn-primary" href="">update</a>
-                                    <a class="col-auto btn btn-danger"  href="">delete</a>
+                                    <a class="col-auto btn btn-danger"  href="deleteClothes.php?id=<?php echo $clothe['product_id'] ?>">delete</a>
                                 </td>
                                 </tr>
                             <?php } ?>
