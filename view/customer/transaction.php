@@ -25,7 +25,7 @@
         <!-- Main Content -->
         <div id="content">
     
-            <?= include_template('../../view/template/customerNavigation.php', ['title' => 'Your Cart', 'email' => $_SESSION['logged_user']['email']]) ?>
+            <?= include_template('../../view/template/customerNavigation.php', ['title' => 'Your Transaction History', 'email' => $_SESSION['logged_user']['email']]) ?>
     
             <div class="container-fluid">
 
