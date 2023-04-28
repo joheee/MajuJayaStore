@@ -1,7 +1,8 @@
 <?php
     require_once '../../utils/db.php';
     require_once '../../utils/setError.php';
-    
+    require_once '../../middleware/authMiddleware.php';
+
     function handleRegister($name, $address, $email, $password) {
         $con = connectToDatabase();
         
@@ -17,9 +18,7 @@
                 'password' => $password
             );
             $_SESSION['logged_user'] = $user;
-
-            header("Location: ../customer/home.php");
-            exit;
-        } else setError('email duplikat cok');
+            authMiddleware();
+        } else setError('email has been used!');
     }
 ?>

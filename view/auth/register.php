@@ -4,11 +4,10 @@
 <?php 
   require_once '../../controller/handleRegister.php';
   require_once '../../utils/setError.php';
-  session_start();
+  require_once '../../middleware/authMiddleware.php';
 
-  if(isset($_SESSION['logged_user'])) {
-    var_dump($_SESSION['logged_user']);
-  }
+  session_start();
+  authMiddleware();
 
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($_POST['name']) && !empty($_POST['address']) && !empty($_POST['email']) && !empty($_POST['password'])) handleRegister($_POST['name'], $_POST['address'], $_POST['email'], $_POST['password']);

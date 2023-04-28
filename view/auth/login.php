@@ -4,11 +4,10 @@
 <?php 
   require_once '../../controller/handleLogin.php';
   require_once '../../utils/setError.php';
+  require_once '../../middleware/authMiddleware.php';
+  
   session_start();
-
-  if(isset($_SESSION['logged_user'])) {
-    var_dump($_SESSION['logged_user']);
-  }
+  authMiddleware();
 
   if($_SERVER['REQUEST_METHOD'] == 'POST') {
     if(!empty($_POST['email']) && !empty($_POST['password'])) handleLogin($_POST['email'], $_POST['password']);
