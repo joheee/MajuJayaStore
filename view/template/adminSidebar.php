@@ -24,7 +24,7 @@
     </li>
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="clothes.php">
         <i class="fa-solid fa-shirt"></i>
         <span>Clothes</span></a>
     </li>

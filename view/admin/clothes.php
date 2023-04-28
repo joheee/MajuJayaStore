@@ -1,5 +1,5 @@
 <?php require_once '../../utils/includeTemplate.php'; ?>
-<?= include_template('../../view/template/header.php', ['title' => 'Product | MajuJaya']) ?>
+<?= include_template('../../view/template/header.php', ['title' => 'Clothes | MajuJaya']) ?>
 
 
 <?php 
@@ -33,7 +33,7 @@
             <div class="container-fluid">
     
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fa-solid fa-shirt"></i> Insert New Clothes</a>
+                    <a href="insertClothes.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fa-solid fa-shirt"></i> Insert New Clothes</a>
                 </div>
 
                 <div class="container card p-5">
