@@ -1,5 +1,5 @@
 <?php
-    require_once '../../controller/deleteProduct.php';
+    require_once '../../controller/handleDeleteProduct.php';
     $id = $_GET['id'];
-    deleteProduct($id);
+    handleDeleteProduct($id);
 ?>

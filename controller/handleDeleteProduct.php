@@ -1,7 +1,7 @@
 <?php
     require_once '../../utils/db.php';
 
-    function deleteProduct($id) {
+    function handleDeleteProduct($id) {
         $sql = "DELETE FROM `product` WHERE `product`.`product_id` = $id";
         $con = connectToDatabase();
         $con->query($sql);
