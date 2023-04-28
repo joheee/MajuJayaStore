@@ -12,7 +12,7 @@
             $role = $row[0][4];
             var_dump($role);
             if($role == 'admin') {
-                header("Location: ../admin/product.php");
+                header("Location: ../admin/clothes.php");
                 exit;
             } else {
                 header("Location: ../customer/home.php");

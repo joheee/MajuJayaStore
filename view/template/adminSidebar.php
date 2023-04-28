@@ -13,8 +13,20 @@
 
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <span>Transaction</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="index.html">
         <i class="fa-solid fa-people-group"></i>
         <span>Customer</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-shirt"></i>
+        <span>Clothes</span></a>
     </li>
 
     <li class="nav-item active">
@@ -22,11 +34,11 @@
         <i class="fa-sharp fa-solid fa-list"></i>
         <span>Admin</span></a>
     </li>
-    
+
     <li class="nav-item active">
         <a class="nav-link" href="index.html">
-        <i class="fa-solid fa-money-check-dollar"></i>
-        <span>Transaction</span></a>
+        <i class="fa-solid fa-lock"></i>
+        <span>Change Password</span></a>
     </li>
 
     <li class="nav-item active">
