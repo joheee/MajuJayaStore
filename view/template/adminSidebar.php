@@ -12,7 +12,7 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="transaction.php">
         <i class="fa-solid fa-money-check-dollar"></i>
         <span>Transaction</span></a>
     </li>
