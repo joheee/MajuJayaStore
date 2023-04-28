@@ -14,7 +14,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="transaction.php">
         <i class="fa-solid fa-money-check-dollar"></i>
-        <span>Transaction</span></a>
+        <span>Transaction Report</span></a>
     </li>
 
     <li class="nav-item active">
