@@ -44,7 +44,7 @@
                                 <td><?php echo $clothe['product_stock'] ?></td>
                                 <td><?php echo $clothe['product_price'] ?></td>
                                 <td class="row gap-2">
-                                    <a class="col-auto btn btn-info" href="updateClothes.php?id=<?php echo $clothe['product_id'] ?>">buy</a>
+                                    <a class="col-auto btn btn-info" href="handleBuy.php?id=<?php echo $clothe['product_id'] ?>&stock=<?php echo $clothe['product_stock'] ?>">buy</a>
                                 </td>
                                 </tr>
                             <?php } ?>
